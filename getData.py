@@ -2,7 +2,7 @@ import pandas as pd
 
 getFromIC = pd.read_csv('static/add09.csv')
 
-#nic = "200323211230"
+#nic = "200323210433"
 
 
 def taab(g_nic):
@@ -12,4 +12,6 @@ def taab(g_nic):
   return all_det
 
 
-#print(type(taab(nic)))
+def House_Num(g_nic):
+  det = getFromIC.loc[getFromIC['NIC'] == g_nic, 'hou_num']
+  return det.values[0]
